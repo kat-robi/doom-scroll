@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ads going crazy</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background:black;
+      overflow:hidden;
+      height:100vh;
+      font-family:Arial, sans-serif;
+    }
+
+    /* overlapping ads */
+    .ad {
+      position:absolute;
+      color:white;
+      padding:50px;
+      font-size:2rem;
+      text-align:center;
+    }
+
+    .ad1 { background:red; top:10%; left:5%; width:35%; transform:rotate(-15deg);}
+    .ad2 { background:blue; top:25%; left:50%; width:40%; transform:rotate(10deg);}
+    .ad3 { background:green; top:55%; left:10%; width:30%; transform:rotate(-20deg);}
+    .ad4 { background:orange; top:65%; left:40%; width:35%; transform:rotate(15deg);}
+    .ad5 { background:purple; top:30%; left:70%; width:30%; transform:rotate(-10deg);}
+
+    /* Huge central ad (BIGGEST) */
+    .central {
+      position:absolute;
+      top:25%;
+      left:15%;
+      width:70%;
+      height:50%;
+      background:pink;
+      color:black;
+      font-size:3rem;
+      text-align:center;
+      padding-top:60px;
+      transform:rotate(5deg);
+      z-index:100;
+    }
+
+    .central .btn {
+      margin-top:30px;
+      font-size:2rem;
+    }
+
+    /* Scrolling text at bottom */
+    .scrolling-text {
+      position:absolute;
+      bottom:0;
+      white-space:nowrap;
+      font-size:2rem;
+      animation: scroll 15s linear infinite;
+      color:yellow;
+      width:200%;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="ad ad1">FREE PHONE!</div>
+<div class="ad ad2">FREE COMPUTER!</div>
+<div class="ad ad3">FREE TRIP!</div>
+<div class="ad ad4">FREE GAMES!</div>
+<div class="ad ad5">FREE DIAMONDS!</div>
+
+<div class="central">
+  CLAIM YOUR FREE PRIZES NOW!
+  <br>
+  <!-- Button inside central ad -->
+  <a href="error.html" class="btn btn-dark btn-lg">CLICK ME</a>
+</div>
+
+<div class="scrolling-text">
+  FREE PHONE FREE COMPUTER FREE TRIP FREE GAMES FREE DIAMONDS CLICK CLICK CLICK
+</div>
+
+</body>
+</html>
